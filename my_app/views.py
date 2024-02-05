@@ -16,6 +16,6 @@ def projects(request):
     projects = list(Project.objects.values())
     return JsonResponse(projects, safe=False)
 
-def task(request, id):
-    task = Task.objects.get(id=id)
+def task(request, title):
+    task = Task.objects.get(title=title)
     return HttpResponse('Task: %s' % task.title)
