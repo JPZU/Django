@@ -1,3 +1,5 @@
+{% extends 'layouts/base.html' %} {% block content %}
+
 <h1>Task</h1>
 
 {% for task in tasks %}
@@ -6,4 +8,4 @@
 <p>{{task.description}} - {{task.project.name}}</p>
 <button>❎ Delete</button>
 <button>✅ Done</button>
-{% endfor%}
+{% endfor%} {% endblock %}
